@@ -18,11 +18,17 @@ public class Main {
                 String id = scanner.next();
                 int pages = scanner.nextInt();
 
+                //printjob job;
+
                 if (type.equals("MONO")) {
                     jobs.add(new MonoPrint(id, pages));
+                    //job = new MonoPrint(id, pages)
                 } else if (type.equals("COLOUR")) {
                     jobs.add(new ColourPrint(id, pages));
+                    //job = new ColourPrint(id, pages)
                 }
+
+                //jobs.add(job);
             }
             scanner.close();
             
