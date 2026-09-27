@@ -89,7 +89,7 @@ public class Main {
         // print hasil akhir
         System.out.println("=== Final Balances ===");
         for (String[] customer : customersList) {
-            System.out.println(customer[0] + ": " + customer[1]);
+            System.out.println(customer[0] + " : " + customer[1]);
         }
 
         System.out.println("=== Failed Transactions ===");
