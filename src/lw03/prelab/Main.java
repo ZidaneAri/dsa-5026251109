@@ -17,14 +17,16 @@ public class Main {
 
     private static void Problem1() {
         List<String> playlist = new ArrayList<>();
-        
+
         Scanner scanner = new Scanner(Main.class.getResourceAsStream("playlist.txt"));
+        
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
             if (line.isEmpty()) continue;
             
             String[] parts = line.split(" ", 2);
             String command = parts[0];
+            //String song = parts[1];
             
             if (command.equals("ADD")) {
                 playlist.add(parts[1]);
@@ -50,6 +52,7 @@ public class Main {
         int duplicateRegistrations = 0;
 
         Scanner scanner = new Scanner(Main.class.getResourceAsStream("participants.txt"));
+        
         while (scanner.hasNextLine()) {
             String name = scanner.nextLine().trim();
             if (name.isEmpty()) continue;
@@ -80,6 +83,22 @@ public class Main {
             String type = scanner.next();
             String product = scanner.next();
             int quantity = scanner.nextInt();
+            
+            /* if (type.equals("ADD")){
+                if (inventory.containsKey(product)){
+                    int currentStock = inventory.get(product);
+                    inventory.put(product, currentStock + quantity);
+                } else {
+                    inventory.put(product, quantity);
+                } else if (type.equals("SELL")){
+                    if (inventory.containsKey(product)) && inventory.get(product) >= quantity){
+                        int currentStock =  inventory.get(product);
+                        inventory.put(product, currentStock - quantity);
+                    } else {
+                        failedSales++;
+                    }
+
+             */
 
             if (type.equals("ADD")) {
                 inventory.put(product, inventory.getOrDefault(product, 0) + quantity);
