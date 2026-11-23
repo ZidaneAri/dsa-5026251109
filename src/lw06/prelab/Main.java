@@ -6,7 +6,7 @@ public class Main {
 
     public static Node insert(Node root, int data) {
         if (root == null) {
-            return new Node(data); //1
+            return new Node(data);    //1
         }
 
         if (data < root.data) { //2
@@ -58,8 +58,15 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(Main.class.getResourceAsStream("treenumbers.txt"));
+        
+        //String firstLine = sc.nextLine()
+        //String[] numbers = firstLine.split(" ");
 
         Node root = null;
+
+        // for (int i = 0; i < numbers.length; i++) {
+        //        int value = integer.parseInt(numbers[i]);
+        //        root = insert(root, value);
 
         if (sc.hasNextLine()) {
             String line = sc.nextLine().trim();
